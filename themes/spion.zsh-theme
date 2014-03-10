@@ -292,7 +292,7 @@ colorword() {
 prompt_wunjo_setup() {
     local verbose
     if [[ $TERM == screen* ]] && [ -n "$STY" ]; then
-        verbose=0 
+        verbose=0
     else
         verbose=1
     fi
@@ -336,28 +336,28 @@ prompt_wunjo_setup() {
     local -A pc
     pc[default]='default'
     pc[date]='cyan'
-    #pc[time]='Blue'
-    pc[time]='blue'
-    #pc[host]='Green'
-    pc[host]='green'
+    pc[time]='Blue'
+    #pc[time]='blue'
+    pc[host]='Green'
+    #pc[host]='green'
     pc[user]='cyan'
-    #pc[punc]='yellow'
-    pc[punc]='Yellow'
+    pc[punc]='yellow'
+    #pc[punc]='Yellow'
     pc[line]='magenta'
     pc[hist]='green'
-    #pc[path]='Cyan'
-    pc[path]='blue'
+    pc[path]='Cyan'
+    #pc[path]='blue'
     pc[shortpath]='default'
     pc[rc]='red'
-    #pc[scm_branch]='Cyan'
-    pc[scm_branch]='cyan'
-    #pc[scm_commitid]='Yellow'
-    pc[scm_commitid]='yellow'
+    pc[scm_branch]='Cyan'
+    #pc[scm_branch]='cyan'
+    pc[scm_commitid]='Yellow'
+    #pc[scm_commitid]='yellow'
     pc[scm_status_dirty]='Red'
-    #pc[scm_status_staged]='Green'
-    pc[scm_status_staged]='green'
-    #pc[#]='Yellow'
-    pc[#]='yellow'
+    pc[scm_status_staged]='Green'
+    #pc[scm_status_staged]='green'
+    pc[#]='Yellow'
+    #pc[#]='yellow'
     for cn in ${(k)pc}; do
         pc[${cn}]=$(colorword $pc[$cn])
     done
